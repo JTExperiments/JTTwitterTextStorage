@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "JTTwitterTextStorage.h"
 
 @interface ViewController ()
 
@@ -14,16 +15,22 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    JTTwitterTextStorage *textStorage = (JTTwitterTextStorage *)self.textView.textStorage;
+
+    textStorage.tokens = @{
+                           JTTwitterTextStorageDefaultAttributes:@{NSForegroundColorAttributeName: [UIColor blackColor]},
+                           @"#hashtag":@{NSForegroundColorAttributeName: [UIColor colorWithRed:0.000 green:0.568 blue:1.000 alpha:1.000]},
+                           @"@mention":@{NSForegroundColorAttributeName: [UIColor colorWithRed:0.000 green:0.568 blue:1.000 alpha:1.000]},
+                           @"Link":@{NSForegroundColorAttributeName: [UIColor lightGrayColor]},
+                           @"Phone":@{NSForegroundColorAttributeName: [UIColor lightGrayColor]},
+                           @"TextKit":@{NSForegroundColorAttributeName: [UIColor colorWithRed:0.000 green:0.568 blue:0.000 alpha:1.000],
+                                        NSLinkAttributeName:@"http://asciiwwdc.com/2013/sessions/210",
+                                        NSUnderlineStyleAttributeName:@(1),
+                                        },
+                           };
 }
 
 @end

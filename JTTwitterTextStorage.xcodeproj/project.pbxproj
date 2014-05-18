@@ -21,6 +21,10 @@
 		1A7CD82019289D5B0074C56C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A7CD80219289D5B0074C56C /* UIKit.framework */; };
 		1A7CD82819289D5B0074C56C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1A7CD82619289D5B0074C56C /* InfoPlist.strings */; };
 		1A7CD82A19289D5B0074C56C /* JTTwitterTextStorageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD82919289D5B0074C56C /* JTTwitterTextStorageTests.m */; };
+		1A7CD83519289E350074C56C /* JTResignKeyboardIntention.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD83419289E350074C56C /* JTResignKeyboardIntention.m */; };
+		1A7CD8381928A2080074C56C /* JTTextViewControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD8371928A2080074C56C /* JTTextViewControl.m */; };
+		1A7CD83B1928A7410074C56C /* JTTwitterTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD83A1928A7410074C56C /* JTTwitterTextStorage.m */; };
+		1A7CD83E1928A7680074C56C /* JTTwitterTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD83D1928A7680074C56C /* JTTwitterTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,14 @@
 		1A7CD82519289D5B0074C56C /* JTTwitterTextStorageTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JTTwitterTextStorageTests-Info.plist"; sourceTree = "<group>"; };
 		1A7CD82719289D5B0074C56C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1A7CD82919289D5B0074C56C /* JTTwitterTextStorageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTTwitterTextStorageTests.m; sourceTree = "<group>"; };
+		1A7CD83319289E350074C56C /* JTResignKeyboardIntention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTResignKeyboardIntention.h; sourceTree = "<group>"; };
+		1A7CD83419289E350074C56C /* JTResignKeyboardIntention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTResignKeyboardIntention.m; sourceTree = "<group>"; };
+		1A7CD8361928A2080074C56C /* JTTextViewControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTTextViewControl.h; sourceTree = "<group>"; };
+		1A7CD8371928A2080074C56C /* JTTextViewControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTTextViewControl.m; sourceTree = "<group>"; };
+		1A7CD8391928A7410074C56C /* JTTwitterTextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTTwitterTextStorage.h; sourceTree = "<group>"; };
+		1A7CD83A1928A7410074C56C /* JTTwitterTextStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTTwitterTextStorage.m; sourceTree = "<group>"; };
+		1A7CD83C1928A7680074C56C /* JTTwitterTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTTwitterTextView.h; sourceTree = "<group>"; };
+		1A7CD83D1928A7680074C56C /* JTTwitterTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTTwitterTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +131,14 @@
 				1A7CD81419289D5B0074C56C /* ViewController.m */,
 				1A7CD81619289D5B0074C56C /* Images.xcassets */,
 				1A7CD80519289D5B0074C56C /* Supporting Files */,
+				1A7CD83319289E350074C56C /* JTResignKeyboardIntention.h */,
+				1A7CD83419289E350074C56C /* JTResignKeyboardIntention.m */,
+				1A7CD8361928A2080074C56C /* JTTextViewControl.h */,
+				1A7CD8371928A2080074C56C /* JTTextViewControl.m */,
+				1A7CD8391928A7410074C56C /* JTTwitterTextStorage.h */,
+				1A7CD83A1928A7410074C56C /* JTTwitterTextStorage.m */,
+				1A7CD83C1928A7680074C56C /* JTTwitterTextView.h */,
+				1A7CD83D1928A7680074C56C /* JTTwitterTextView.m */,
 			);
 			path = JTTwitterTextStorage;
 			sourceTree = "<group>";
@@ -249,7 +269,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A7CD83E1928A7680074C56C /* JTTwitterTextView.m in Sources */,
+				1A7CD83B1928A7410074C56C /* JTTwitterTextStorage.m in Sources */,
 				1A7CD81519289D5B0074C56C /* ViewController.m in Sources */,
+				1A7CD8381928A2080074C56C /* JTTextViewControl.m in Sources */,
+				1A7CD83519289E350074C56C /* JTResignKeyboardIntention.m in Sources */,
 				1A7CD80F19289D5B0074C56C /* AppDelegate.m in Sources */,
 				1A7CD80B19289D5B0074C56C /* main.m in Sources */,
 			);

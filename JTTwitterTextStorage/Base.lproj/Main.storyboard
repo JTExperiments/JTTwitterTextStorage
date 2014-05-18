@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="v51-SB-f1g">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller - UITextView-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,168 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFU-cl-Qps">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">An excercise on using NSTextStorage to provide interactive links for @mention #hashtag.
+
+Data detector still works.
+
+Phone: +852 98765432
+Link: http://twitter.com</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="UITextView" id="DW2-lS-gJe">
+                        <barButtonItem key="leftBarButtonItem" title="Editable" id="rf9-tl-Zyo">
+                            <connections>
+                                <action selector="toggleEditable:" destination="5iZ-En-DtO" id="WUK-Ax-3Bs"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Dismiss" id="6ik-1P-VRy">
+                            <connections>
+                                <action selector="dismissButtonDidPress:" destination="D5q-Fj-Yjm" id="tCl-wd-2YQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <customObject id="D5q-Fj-Yjm" customClass="JTResignKeyboardIntention">
+                    <connections>
+                        <outlet property="view" destination="lFU-cl-Qps" id="esK-jR-5lF"/>
+                    </connections>
+                </customObject>
+                <customObject id="5iZ-En-DtO" customClass="JTTextViewControl">
+                    <connections>
+                        <outlet property="textView" destination="lFU-cl-Qps" id="9gv-xs-SRH"/>
+                    </connections>
+                </customObject>
             </objects>
+            <point key="canvasLocation" x="1198" y="598"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Q4b-TO-wVf">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="v51-SB-f1g" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="P5r-rO-W9N">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Zpr-2l-cpt" kind="relationship" relationship="viewControllers" id="QyJ-Ph-ZMU"/>
+                        <segue destination="J3j-Uy-Jmy" kind="relationship" relationship="viewControllers" id="mnt-9q-zOV"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Win-RZ-pFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304" y="271"/>
+        </scene>
+        <!--View Controller - JTTwitterTextStorage-->
+        <scene sceneID="JKy-n9-uwR">
+            <objects>
+                <viewController id="ozs-1B-SiK" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YoD-Ki-f0z"/>
+                        <viewControllerLayoutGuide type="bottom" id="2QF-1d-po7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i3e-uA-BxR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZ5-89-OpN" customClass="JTTwitterTextView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">An excercise on using TextKit to provide interactive links for @mention #hashtag.
+
+Data detector still works.
+
+Phone: +852 98765432
+Link: http://twitter.com</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="JTTwitterTextStorage" id="Hqm-aW-zkf">
+                        <barButtonItem key="leftBarButtonItem" title="Editable" id="Wif-Kn-1SB">
+                            <connections>
+                                <action selector="toggleEditable:" destination="Gh8-My-0ZX" id="ETB-03-cjF"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Dismiss" id="r5a-fq-ZvB">
+                            <connections>
+                                <action selector="dismissButtonDidPress:" destination="RJ3-dg-ab3" id="chZ-mY-FyB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="UZ5-89-OpN" id="hZP-Ca-jvG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IiC-sj-95t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="RJ3-dg-ab3" customClass="JTResignKeyboardIntention">
+                    <connections>
+                        <outlet property="view" destination="UZ5-89-OpN" id="3Ge-uF-0SV"/>
+                    </connections>
+                </customObject>
+                <customObject id="Gh8-My-0ZX" customClass="JTTextViewControl">
+                    <connections>
+                        <outlet property="textView" destination="UZ5-89-OpN" id="yrY-WM-7hS"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="1198" y="-101"/>
+        </scene>
+        <!--Navigation Controller - JTTwitterTextStorage-->
+        <scene sceneID="8lO-Ju-GjN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zpr-2l-cpt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="JTTwitterTextStorage" id="SL6-GN-NgS"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uK0-uD-atA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ozs-1B-SiK" kind="relationship" relationship="rootViewController" id="frG-Xy-sWp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s9c-oS-vqp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="763" y="-101"/>
+        </scene>
+        <!--Navigation Controller - UITextView-->
+        <scene sceneID="vcl-xn-iWZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J3j-Uy-Jmy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="UITextView" id="eW6-Ak-7h8"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XFY-6v-YI3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="a57-tF-jDN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eFe-kC-gLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="763" y="593"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  JTTwitterTextView.h
 //  JTTwitterTextStorage
 //
 //  Created by James Tang on 18/5/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-@property (weak, nonatomic) IBOutlet UITextView *textView;
+@interface JTTwitterTextView : UITextView
 
 @end
